@@ -1,0 +1,67 @@
+{% extends 'check_app/components/base.html' %}
+
+{% block content %}
+<h1 class='text'>tetsqweqw</h1>
+
+<a href="{% url 'create-list' %}">add list</a>
+
+<form method='GET'>
+    <input type="text" name='search-area' >
+    <input type="submit" value='Search'>
+</form>
+
+
+<table class='content-table' border="1">
+    <thead>
+        <tr>
+            <th>員数</th>
+            <th>場所</th>
+            <th>チェック対象</th>
+            <th>チェック細目</th>
+            <th>ﾒｰｶｰ＆機種</th>
+            <th>チェック方法</th>
+            <th>有るべき正常な状態</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>状態</th>
+            <th>他</th>
+            <th>備考</th>
+        </tr>
+    </thead>
+
+
+    {% for inspection in lists  %}
+    <tr>
+        <td>{{ inspection.count }}</td>
+        <td>{{ inspection.location }}</td>
+        <td>{{ inspection.checkTarget }}</td>
+        <td>{{ inspection.checkDetail }}</td>
+        <td>{{ inspection.manufacturerModel }}</td>
+        <td>{{ inspection.method }}</td>
+        <td>{{ inspection.normalState }}</td>
+
+        <td><a class='edit-link' href=" {% url 'update-list'  inspection.id %}">&#9998;</a></td>
+        <td><a class='delete-link' href=" {% url 'delete-list'  inspection.id %}">&#215;</a></td>
+
+        <td><div>
+            <input type="radio" id='normal' value='normal'> <label for="normal">Norma</label>
+            <input type="radio" id='normal' value='normal'> <label for="normal">Norma</label>
+        </div></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td>
+        <form action="" method='POST'>
+            <input type="submit">
+        </form>
+        </td>
+
+    </tr>
+
+    {% empty %}
+        <h3> NO item in list</h3>
+    {% endfor %}
+    
+</table>
+
+{% endblock content %}

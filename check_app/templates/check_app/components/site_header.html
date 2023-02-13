@@ -1,0 +1,15 @@
+{% load static %}
+
+<header>
+    <div class="nav-container">
+        <!-- Nav bar logo -->
+        <a href=" {% url 'home' %} " class="nav-item"><img class="logo" src="{% static 'check_app/logo_betsukawa.svg' %}" alt="logo"></a>
+      
+        <!-- Nav bar menu items -->
+        <div class='item-container'>
+          <a href="{% url 'home' %}" class="nav-item">Home</a>
+          <a href="{% url 'about' %}" class="nav-item">About</a>
+          <div class="dot"></div>
+        </div>
+      </div>
+</header>

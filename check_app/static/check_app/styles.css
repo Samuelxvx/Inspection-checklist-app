@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFF;
+  font-family: "JetBrains Mono", monospace;
+}
+
+header {
+  text-decoration: none;
+  /* Nav bar items */
+  /* Nav bar item hover effect */
+}
+header .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #D9D9D9;
+  height: 90px;
+}
+header .item-container {
+  padding-right: 40px;
+}
+header .logo {
+  height: auto;
+  width: 30%;
+}
+header .nav-item {
+  color: white;
+  font-size: 21px;
+  text-decoration: none;
+  padding: 0 20px;
+}
+header .nav-item:hover {
+  color: #005BAC;
+}
+
+.text {
+  color: wheat;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  width: 100%;
+}
+.content-table thead tr {
+  background-color: #005BAC;
+  color: #D9D9D9;
+  text-align: lef;
+  font-weight: bold;
+}
+.content-table thead tr .item-header-2 {
+  width: 1000px;
+}
+.content-table th, .content-table td {
+  padding: 12px 15px;
+}
+.content-table tr {
+  border-bottom: 1px solid cadetblue;
+}
+
+.site-footer {
+  margin: 50px 0;
+  padding: 40px 10px;
+  background-color: #D9D9D9;
+  font-size: 13px;
+}/*# sourceMappingURL=styles.css.map */
